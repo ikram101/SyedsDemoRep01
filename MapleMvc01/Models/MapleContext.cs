@@ -11,7 +11,7 @@ namespace MapleMvc01.Models
     {
         public MapleContext():base("name=MapleConnectionString")
         {
-          // Database.Log = sql => Debug.Write(sql);
+           Database.Log = sql => Debug.Write(sql);
         }
 
         public DbSet<Person> Persons { get; set; }
