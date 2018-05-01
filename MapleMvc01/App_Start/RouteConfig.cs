@@ -9,6 +9,7 @@ namespace MapleMvc01
 {
     public class RouteConfig
     {
+        //Hellow word
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
