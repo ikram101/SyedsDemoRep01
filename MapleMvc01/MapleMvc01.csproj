@@ -163,23 +163,50 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BookStoreEntities\BookStoreModels.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804292248014_First.cs" />
-    <Compile Include="Migrations\201804292248014_First.Designer.cs">
-      <DependentUpon>201804292248014_First.cs</DependentUpon>
+    <Compile Include="BookStoreEntities\BookStoreDbContext.cs" />
+    <Compile Include="Migrations\201805120420072_002.cs" />
+    <Compile Include="Migrations\201805120420072_002.Designer.cs">
+      <DependentUpon>201805120420072_002.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804292318465_second.cs" />
-    <Compile Include="Migrations\201804292318465_second.Designer.cs">
-      <DependentUpon>201804292318465_second.cs</DependentUpon>
+    <Compile Include="Migrations\201805120421102_0023.cs" />
+    <Compile Include="Migrations\201805120421102_0023.Designer.cs">
+      <DependentUpon>201805120421102_0023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120431427_33.cs" />
+    <Compile Include="Migrations\201805120431427_33.Designer.cs">
+      <DependentUpon>201805120431427_33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120436061_34.cs" />
+    <Compile Include="Migrations\201805120436061_34.Designer.cs">
+      <DependentUpon>201805120436061_34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120449595_35.cs" />
+    <Compile Include="Migrations\201805120449595_35.Designer.cs">
+      <DependentUpon>201805120449595_35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120459349_366.cs" />
+    <Compile Include="Migrations\201805120459349_366.Designer.cs">
+      <DependentUpon>201805120459349_366.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120502505_3664.cs" />
+    <Compile Include="Migrations\201805120502505_3664.Designer.cs">
+      <DependentUpon>201805120502505_3664.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121352253_36647.cs" />
+    <Compile Include="Migrations\201805121352253_36647.Designer.cs">
+      <DependentUpon>201805121352253_36647.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\MapleContext.cs" />
+    <Compile Include="Models\Generics.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="PeopleController.cs" />
+    <Compile Include="Models\UserPosts.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +253,15 @@
     <Content Include="Views\People\Details.cshtml" />
     <Content Include="Views\People\Edit.cshtml" />
     <Content Include="Views\People\Index.cshtml" />
+    <Content Include="Views\Home\WebPage1.cshtml" />
+    <Content Include="Views\Home\Helper11.cshtml" />
+    <Content Include="Views\Home\WebPage2.cshtml" />
+    <Content Include="Views\Home\WebPage34.cshtml" />
+    <Content Include="Views\Home\hello.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,15 +280,33 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804292248014_First.resx">
-      <DependentUpon>201804292248014_First.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804292318465_second.resx">
-      <DependentUpon>201804292318465_second.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201805120420072_002.resx">
+      <DependentUpon>201805120420072_002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120421102_0023.resx">
+      <DependentUpon>201805120421102_0023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120431427_33.resx">
+      <DependentUpon>201805120431427_33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120436061_34.resx">
+      <DependentUpon>201805120436061_34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120449595_35.resx">
+      <DependentUpon>201805120449595_35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120459349_366.resx">
+      <DependentUpon>201805120459349_366.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120502505_3664.resx">
+      <DependentUpon>201805120502505_3664.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121352253_36647.resx">
+      <DependentUpon>201805121352253_36647.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
