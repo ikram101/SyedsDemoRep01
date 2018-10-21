@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCoreDemo.Models;
 
-namespace DotNetCoreDemo_01.Controllers
+namespace MyCoreDemo.Controllers
 {
     public class MoviesController : Controller
     {
