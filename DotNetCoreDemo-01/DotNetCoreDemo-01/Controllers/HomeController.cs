@@ -4,25 +4,18 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DotNetCoreDemo_01.Models;
+using MyCoreDemo.Models;
 using System.Text.RegularExpressions;
 using System.Text;
 
-namespace DotNetCoreDemo_01.Controllers
+namespace MyCoreDemo.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
 
-            var i = 2;
-            Func<int, int> f1 =(x) => x * i;
-            i = 5;
-            Func<int, int> f2 = x => f1(x);
-            int xd = f2(2);
-            xd = 33;
-
-            //Predicate<int> p1 ()=>p>4;
+             
 
 
 

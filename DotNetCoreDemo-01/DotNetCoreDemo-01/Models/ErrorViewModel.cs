@@ -1,6 +1,6 @@
 using System;
 
-namespace DotNetCoreDemo_01.Models
+namespace MyCoreDemo.Models
 {
     public class ErrorViewModel
     {
