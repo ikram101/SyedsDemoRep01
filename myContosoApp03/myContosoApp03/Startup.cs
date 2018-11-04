@@ -19,6 +19,7 @@ namespace myContosoApp03
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            int a = 100;
         }
 
         public IConfiguration Configuration { get; }
@@ -36,8 +37,6 @@ namespace myContosoApp03
 
             services.AddDbContext<ContosoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("AppleConn")));
-
-            
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -65,6 +64,23 @@ namespace myContosoApp03
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            try
+            {
+                using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+                {
+                    var context = serviceScope.ServiceProvider.GetRequiredService<ContosoContext>();
+
+                    DbInitializer.Initialize(context);
+                    //context.Database.EnsureCreated();
+                }
+            }
+            catch (Exception ex)
+            {
+                 
+            }
+            
         }
     }
 }
